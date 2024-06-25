@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap");
+
+.dycalendar {
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding-bottom: 0px;
+}
+
+.dycalendar table {
+  width: 100%;
+  height: 100%;
+}
+
+.dycalendar table tr:first-child td {
+  color: grey;
+}
+
+.dycalendar table td {
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: "poppins", sans-serif;
+  text-align: center;
+}
+
+.dycalendar table td:hover {
+  background: rgba(192, 192, 192, 0.3);
+  transition: all 0.2s ease-out;
+}
+
+table {
+  border-spacing: 15px;
+}
+
+.dycalendar-month-container {
+  font-size: 25px;
+  width: auto;
+  padding: 10px;
+}
+
+.dycalendar-prev-next-btn.next-btn,
+.prev-btn {
+  padding: 10px 25px;
+  background: none;
+  color: black;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.dycalendar .next-btn {
+  margin-right: 10px;
+}
+
+.dycalendar-prev-next-btn.next-btn:hover {
+  background: #f5f5f5;
+}
+.dycalendar-prev-next-btn.prev-btn:hover {
+  background: #f5f5f5;
+}
+
+.dycalendar .dycalendar-today-date {
+  background: none;
+  background: #5e94eb;
+  border-radius: 10px;
+  color: white;
+}
+
+.dycalendar .dycalendar-today-date:hover {
+  background: #4fa2f5;
+}
+
+.dycalendar-header {
+  font-family: "poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+}
+
+.circle:before {
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 20px;
+  color: black;
+}
+
+.container.dark .toggle-btn {
+  background: #29292b;
+  border: 1px solid white;
+  transition: all 0.2s ease;
+}
+.container.dark .toggle-btn .circle {
+  left: 40px;
+  background: #29292b;
+  border: 1px solid white;
+}
+
+.container.dark .dycalendar {
+  background: #29292b;
+  color: white;
+}
+
+.container.dark .dycalendar table td:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+
+.container.dark .dycalendar-prev-next-btn.next-btn {
+  color: white;
+}
+
+.container.dark .dycalendar-prev-next-btn.prev-btn {
+  color: white;
+}
+
+.container.dark .dycalendar-prev-next-btn.next-btn:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+.container.dark .dycalendar-prev-next-btn.prev-btn:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+
+.container.dark .dycalendar .dycalendar-today-date:hover {
+  background: #5e94eb;
+}
+.container.dark .circle:before {
+  content: "\f185";
+  font-family: fontAwesome;
+  font-size: 30px;
+  color: white;
+}
+
+.dycalendar-month-container td {
+  text-align: center;
+}
+
+.dycalendar-month-container .dycalendar-day-letters td {
+    font-weight: 700;
+    color: black !important;
+}
+
+.dycalendar-disabled-date {
+  color: grey;
+  pointer-events: none;
+}
+
+button.active, button.dycalendar-disabled-date {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}

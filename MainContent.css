@@ -1,0 +1,245 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header {
+    background-color: #007bff;
+    height: 4.5em;
+}
+
+.login-reg{
+    display: flex;
+}
+.logo {
+    width: 82%;
+}
+
+
+.whereto-passenger{
+    /* background-color: red; */
+    margin-left: 5%;
+    margin-right: 8%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.whereto-passenger .input-group {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.whereto-passenger .wt-p.form-control, .whereto-passenger .wt-p.btn.btn-primary {
+    /* flex: 1; */
+    /* margin-right: 10px; */
+    border-radius: 25px;
+}
+
+
+.btn.btn-secondary.dropdown-toggle{
+    background-color: #007bff;
+    border-radius: 0%;
+}
+
+
+/* .search-bar .form-control {
+    width: 300px;
+    height: 40px;
+} */
+
+.form-inline {
+    display: flex;
+    justify-content: center; /* Memusatkan form inline */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+
+#sidebar{
+    min-width: 230px;
+    background-color:  white !important;
+    width: 20%;
+    /* background-color: red; */
+    /* padding-left: 10%; */
+    /* margin-left: 10%; */
+}
+
+/* #btn-airlines{
+    min-width: 100%;
+    width: 100%;
+} */
+
+#btn-airlines,
+#btn-second-choice {
+    width: 100%;
+}
+
+.bagian-kiri{
+    margin-top: 5%;
+}
+
+.airline-choice-table {
+    width: 100%;
+}
+
+.airline-choice {
+    display: flex;
+    width: 100%;
+}
+
+.input-airline {
+    width: 15%;
+}
+
+
+/* 
+.airlines{
+    width: 100%;
+} */
+
+.input-airline{
+    width: 15%;
+}
+
+.card-body{
+    display: flex;
+}
+
+.fotoatas{
+
+    margin-left: 45%;
+    width: 50px;
+}
+
+#airline-choice-table{
+    width: 100%;
+}
+
+/* #btn-second-choice{
+    min-width: 100%;
+    width: 100%;
+} */
+
+
+
+#ticket-choice{
+    /* background-color: #007bff; */
+
+    margin-left: 2%;
+}
+
+.list-pilihan{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* background-color: aquamarine; */
+}
+.ticket table {
+    margin: auto; /* Untuk menengahkan tabel secara horizontal */
+}
+
+.ticket{
+    margin-top: 1%;
+    background-color: white;
+    border: 1px solid #b3d7ff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 5px 10px 10px 5px;
+}
+
+.ticket .table-borderless img {
+    width: 50px;
+}
+
+
+.table.table-borderless{
+    margin-top: 2%;
+    /* margin-left: 1%; */
+    width: 98%;
+    margin-right: 1%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.table.table-bordered > tbody > tr > td {
+    padding: 0;
+    margin: 0%;
+}
+
+/* #e7f3ff */
+.bagage{
+    background-color: #007bff; /* Warna biru untuk bagian bagasi */
+    color: white; /* Warna teks putih */
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+#collapseExample .card{
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    padding: 0%;
+
+}
+
+.Bdetail{
+    background-color: #007bff;
+    border: 0;
+}
+
+
+/* */
+.table-borderless tr TD {
+    justify-content: flex-start;
+    justify-content: left;
+}
+
+.bagage .d-flex {
+    margin-bottom: 5px; /* Atur jarak bawah untuk ikon dan teks */
+}
+
+.table-borderless {
+    border: none; 
+    width: 100%; 
+}
+
+.card-body .table img {
+    max-width: 20px; 
+    max-height: 20px; 
+    display: flex;
+}
+
+
+
+/* .table-borderless td:first-child {
+    width: 10px; 
+    text-align: center; 
+} */
+
+/* .table-borderless td:last-child {
+    padding-left: 10px; 
+    vertical-align: middle; 
+} */
+
+
+.filtering-tickets{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-item {
+    width: 70px;
+    display: flex;
+    align-items: center;
+}

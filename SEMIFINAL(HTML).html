@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.min.css"
+    />
+    <link rel="stylesheet" href="SEMIFINAL(CSS).css" />
+    <title>SEMIFINAL DESIGN</title>
+  </head>
+
+  <body>
+    <nav class="nav-header d-flex align-items-center px-5">
+      <img src="" alt="logo" class="logo" />
+      <div class="login-reg">
+        <button class="btn btn-light mx-4 px-4">Register</button>
+        <button class="btn btn-primary px-4">Login</button>
+      </div>
+    </nav>
+
+    <div class="whereto-passenger">
+      <div class="input-group">
+        <!-- <span class="input-group-text">First and last name</span> -->
+        <input
+          type="text"
+          id="input-dari"
+          aria-label="tujuan"
+          class="wt-p form-control"
+          placeholder="From"
+        />
+        <input
+          type="text"
+          id="input-tujuan"
+          aria-label="asal"
+          class="wt-p form-control"
+          placeholder="To"
+        />
+        <input
+          type="text"
+          class="wt-p form-control"
+          id="datepicker"
+          placeholder="Select date"
+        />
+        <input
+          type="text"
+          class="wt-p form-control"
+          id="datepicker2"
+          placeholder="Select dates"
+        />
+        <div class="dropdown">
+          <!-- <input type="text" class=" btn-secondary dropdown-toggle"> -->
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            id="passenger-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Passenger
+          </button>
+          <ul class="dropdown-menu" id="tambah-passenger">
+            <li class="dropdown-item d-flex">
+              <div class="pass-item">Adults</div>
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="decrement('adults')"
+              >
+                -
+              </button>
+              <input type="text" class="mx-1" id="adults" value="0" />
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="increment('adults')"
+              >
+                +
+              </button>
+            </li>
+
+            <li class="dropdown-item d-flex">
+              <div class="pass-item">Kids</div>
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="decrement('kids')"
+              >
+                -
+              </button>
+              <input type="text" class="mx-1" id="kids" value="0" />
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="increment('kids')"
+              >
+                +
+              </button>
+            </li>
+
+            <li class="dropdown-item d-flex">
+              <div class="pass-item">Infants</div>
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="decrement('infants')"
+              >
+                -
+              </button>
+              <input type="text" class="mx-1" id="infants" value="0" />
+              <button
+                class="btn btn-sm btn-light mx-3"
+                onclick="increment('infants')"
+              >
+                +
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button class="wt-p btn btn-primary" id="searchTicket">Search</button>
+        <!-- <button class="btn btn-primary" id="people" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Price Range</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul> -->
+        <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button> -->
+      </div>
+      <!-- <form class="form-inline d-flex my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+    </div>
+
+    <div class="container">
+      <aside class="col-md-3 bg-light py-3" id="sidebar">
+        <h3>Filter</h3>
+        <div class="bagian-kiri">
+          <div class="accordion" id="side-choice-first">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Airplanes
+                </button>
+              </h2>
+
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <!-- <strong>Choose your Planes</strong>  -->
+
+                  <div class="airline-choice">
+                    <table class="table-borderless" id="airline-choice-table">
+                      <tr>
+                        <td class="input-airline">
+                          <input
+                            type="checkbox"
+                            value="airasia"
+                            id="checkbox1"
+                          />
+                        </td>
+                        <td class="label-airline">
+                          <label for="checkbox1">Airasia</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <small
+                            >Start From:
+                            <span id="hargaairasia">Price</span></small
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="input-airline">
+                          <input
+                            type="checkbox"
+                            value="lionair"
+                            id="checkbox2"
+                          />
+                        </td>
+                        <td class="label-airline">
+                          <label for="checkbox2">Lion Air</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <small
+                            >Start From:
+                            <span id="hargalion">Price</span></small
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="input-airline">
+                          <input
+                            type="checkbox"
+                            value="citilink"
+                            id="checkbox3"
+                          />
+                        </td>
+                        <td class="label-airline">
+                          <label for="checkbox3">Citilink</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <small
+                            >Start From:
+                            <span id="hargaciti">Price</span></small
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="input-airline">
+                          <input
+                            type="checkbox"
+                            value="garuda"
+                            id="checkbox4"
+                          />
+                        </td>
+                        <td class="label-airline">
+                          <label for="checkbox4">Garuda Indonesia</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <small
+                            >Start From:
+                            <span id="hargagaruda">Price</span></small
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="input-airline">
+                          <input
+                            type="checkbox"
+                            value="batikair"
+                            id="checkbox5"
+                          />
+                        </td>
+                        <td class="label-airline">
+                          <label for="checkbox5">Batik Air</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <small
+                            >Start From:
+                            <span id="hargabatik">Price</span></small
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  Price Range
+                </button>
+              </h2>
+
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <!-- <strong>Range Harga</strong>  -->
+                  <div class="price">
+                    <div class="price-range">
+                      <label for="customRange3" class="form-label"
+                        >Range harga</label
+                      >
+                      <input
+                        type="range"
+                        class="form-range"
+                        id="customRange3"
+                        min="0"
+                        max="10000000"
+                        step="10000"
+                      />
+                      <!-- <input type="range" class="range-min" id="price-range-pesawat" min="0" max="100 000 000" value="50"> -->
+                      <p>Harga: <span id="price-range-pesawat-value"></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="col-md-9 py-3" id="ticket-choice">
+        <!-- PENTING 
+                tulisan jakartanya nnti bikin berubah sesuai inputan sebelumnya ya -->
+        <h2>Departure to <span id="tulisanDepartureTo">Jakarta</span></h2>
+
+        <div class="filtering-tickets">
+          <div class="card" style="width: 15rem">
+            <div class="card-body">
+              <div>
+                Cheapest
+                <br />
+                <span id="LowestValue" style="color: black"></span>
+              </div>
+              <img
+                class="fotoatas"
+                src="https://www.yakimahabitat.org/wp-content/uploads/2020/08/HFH_ICON_COINS_Blue-300x292.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <div class="card-body">
+              <div>
+                Fastest
+                <br />
+                <!-- <span id="LowestValue" style="color: black;" ></span> -->
+              </div>
+              <img
+                class="fotoatas"
+                src="https://cdn-icons-png.flaticon.com/512/2214/2214046.png"
+                alt="bluelightning"
+              />
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <div class="card-body">Early arrival</div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <div class="card-body">Early Departure</div>
+          </div>
+        </div>
+
+        <div class="list-pilihan"></div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#datepicker").datepicker({
+          format: "mm/dd/yyyy",
+          todayHighlight: true,
+          autoclose: true,
+        });
+      });
+      $(document).ready(function () {
+        $("#datepicker2").datepicker({
+          format: "mm/dd/yyyy",
+          todayHighlight: true,
+          autoclose: true,
+        });
+      });
+
+      function increment(id) {
+        let input = document.getElementById(id);
+        input.value = parseInt(input.value) + 1;
+      }
+
+      function decrement(id) {
+        let input = document.getElementById(id);
+        if (input.value > 0) {
+          input.value = parseInt(input.value) - 1;
+        }
+      }
+    </script>
+    <script src="SEMIFINAL(JS).js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header {
+    height: 4.5em;
+}
+
+.logo {
+    margin: 0 80% 0 0;
+}
