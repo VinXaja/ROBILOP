@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Form from './Components/Form.jsx'
 import Calendar from './Components/Calendar.jsx'
 import Type from './Components/Type.jsx'
+import Login from './Components/Login.jsx'
+import Register from './Components/Register.jsx'
 import './Home.css'
 import './Components/Calendar.css'
 import './Components/Type.css'
@@ -79,7 +81,7 @@ function Home() {
                             <div className="type" data-bs-toggle="modal" data-bs-target="#typeModal">
                                 <span className="item-input" id="type">0 Penumpang, Bisnis</span>
                             </div>
-                            <button className="inisakitkepala btn btn-primary">
+                            <button className="inisakitkepala btn btn-primary Registbtn">
                                 <Link to={{pathname: 'MainContent', state: {from: from, to: to}}} id="choose-text">Ayo Pilih Tiketmu</Link>
                             </button>
                         </div>
@@ -97,6 +99,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+
 
             <div className="modal fade" id="typeModal" tabIndex="-1" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
